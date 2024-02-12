@@ -1,0 +1,182 @@
+/*Diseño Mobile First - viewport 'Phone' */
+h1 {
+    font-family: 'Young Serif';
+    font-weight: 400;
+    color: hsl(24, 5%, 18%);
+}
+
+h2 {
+    font-family: 'Young Serif';
+    font-weight: 400;
+    color: hsl(14, 45%, 36%);
+}
+
+h3 {
+    font-family: 'Outfit' ;
+    font-weight: 700;
+    color: hsl(332, 51%, 32%);
+}
+
+.main p,
+.main ul,
+.main ol,
+.main td,
+.main li span,
+.main span { /* Declaracion de los elementos con esas etiquetas para establecer la tipografia del texto de estos */
+    font-family: 'Outfit';
+    font-weight: 400;
+    color: hsl(30, 10%, 34%);
+    font-size: 16px;
+}
+
+.image_container img {
+    width: 100% ; /* Uso de medidas relativas para el ajuste dependiendo del viewport */
+    height: auto; /*El uso de la funcion 'auto' permite que la imagen se con respecto al tamaño del viewport*/
+}
+
+.main {
+    padding: 15px;;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;  /* Por medio del uso de FlexBox es posible ubicar todas las etiquetas 'section' junto sus contenidos correspondientes con una orientacion por columnas  */
+    padding: 20px;
+}
+
+.second-section {
+    background-color: hsl(330, 100%, 98%);
+    border-radius: 30px;
+
+}
+
+.third-section {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.fourth-section {
+    display: flex;
+    gap: 1rem; 
+}
+
+.Line-section {
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.table {
+    width: 100%; /* Uso de medidas relativas para el ajuste de la tabla a su totalidad del espacio disponible dentro del contenedor */
+    border-collapse: collapse; /* Combina los bordes de las celdas de la tabla en un solo borde */
+}
+
+.table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid hsl(30, 18%, 87%)
+}
+
+.table .label {
+    font-weight: 700;
+    color: hsl(14, 45%, 36%);
+}
+
+.table .value { /* Llamado por especificidad de los elementos  */
+    text-indent: 20px;
+}
+
+
+/* Diseño viewport 'Tablet' con base en el diseño Mobile First */ 
+@media (min-width: 768px)  {
+   .second-section {
+        &:hover{
+            border: 2px solid hsl(332, 51%, 32%);
+        }
+   }
+
+   .image_container {
+        &:hover{
+            border: 2px solid hsl(332, 51%, 32%);
+        }
+   }
+
+   .table {
+        &:hover{
+            border: 2px solid hsl(332, 51%, 32%);
+        }
+   }
+
+}
+
+/* Diseño viewport 'Computer' */
+@media (min-width: 1024px){
+    * {
+        margin: 0;
+        padding: 0; 
+        box-sizing: border-box;
+        font-family: Outfit;
+    }
+
+    img.Header_Image {
+        border-radius: 20px;
+    }
+    
+    .image_container {
+        display: flex; /* Usando FlexBox es optimo ubicar la imagen en el centro del contenedor 'main' */
+        content: center;
+        border-radius: 20px;
+    }
+
+    .main {
+        width: 53%;
+        background-color: hsl(0, 0%, 100%);
+        padding: 4.5rem;
+        border-radius: 30px;
+        margin: 80px auto;  /* Centra el elemento horizontalmente al distribuir automaticamente el espacio adicional de la margen */
+        padding: 40px auto;
+    
+        display: flex;
+        flex-direction: column; /* Permite ubicar los contenedores '<div class=''> </div>' contenidos dentro del contenedor 'main' de manera vertical */
+        gap: 1.5rem;
+    }
+
+    body {
+        background-color: hsl(30, 54%, 90%);
+        display: grid;
+        place-items: center;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .first-section {
+        padding: 5px;
+    }
+
+    .second-section {
+        padding: 1.5rem;
+        border-radius: 30px;
+        &:hover {
+            transform: scale (2.15);
+        }
+    }
+
+    .second-section ul li,
+    .third-section ul li {
+        margin-left: 25px;
+    }
+
+    .fourth-section ol li {
+        margin-left: 25px;
+    }
+
+    h2{
+        &:hover {
+            border-bottom: 0.5px solid hsl(14, 45%, 36%); ;
+        }
+    }
+
+}
