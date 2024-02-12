@@ -47,7 +47,6 @@ h3 {
 .second-section {
     background-color: hsl(330, 100%, 98%);
     border-radius: 30px;
-
 }
 
 .third-section {
@@ -85,16 +84,15 @@ h3 {
     text-indent: 20px;
 }
 
-
 /* Diseño viewport 'Tablet' con base en el diseño Mobile First */ 
 @media (min-width: 768px)  {
    .second-section {
-        &:hover{
+        &:hover{ /* uso de Pseudo Clases  */ 
             border: 2px solid hsl(332, 51%, 32%);
         }
    }
 
-   .image_container {
+   .image_container { /* Al pasar el cursor la seccion se ve 'resaltada por una borde */
         &:hover{
             border: 2px solid hsl(332, 51%, 32%);
         }
@@ -113,7 +111,7 @@ h3 {
     * {
         margin: 0;
         padding: 0; 
-        box-sizing: border-box;
+        box-sizing: border-box; /* Establece cómo se calcula el ancho y alto total del contenedor */
         font-family: Outfit;
     }
 
@@ -142,7 +140,7 @@ h3 {
 
     body {
         background-color: hsl(30, 54%, 90%);
-        display: grid;
+        display: grid; /* Haciendo uso de Grid es posible ubicar los elementos de una manera concreta en el espacio */
         place-items: center;
     }
 
@@ -160,7 +158,7 @@ h3 {
         padding: 1.5rem;
         border-radius: 30px;
         &:hover {
-            transform: scale (2.15);
+            transform: scale (2.15); /* El uso de esta Pseudo Clase permite escalar el tamaño del elemento mientras se mantenga el cursor encima de el */
         }
     }
 
