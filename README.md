@@ -68,3 +68,11 @@ El objetivo de este taller es hacer que la página que ya desarrollamos se vea c
 ### Créditos
 - [Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
+## GITHUB Pages
+- #### link Sitio Web Desplegado: https://dsaw-2024-1.github.io/responsive-design-101-JorEstDiBe/
+
+## Responsive Design 
+En la Carpeta 'Responsive Designs' que se encuentra almacenada en este repositorio se encuentran las imagenes capturadas con respecto a la forma que se ve el estilo de la pagina adaptado hacia la accesibilidad de diferentes dispositivos (Mobile, Tablet, Computer).
+
+--> Estos se encuentran por imagen las diferentes secciones de la pagina web desplegada en los diferentes viewports.
+
